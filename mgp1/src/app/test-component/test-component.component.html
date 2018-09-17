@@ -1,3 +1,6 @@
-<div class = "componente-prueba">
-<h1>Esto es una prueba de mi nuevo componente {{title}}</h1>
+<div class="container">
+    <app-lista-comentarios 
+    class="col-md4 p-2" 
+    *ngFor = "let task of tasks" 
+    [comentario] = "task"></app-lista-comentarios>
 </div>

@@ -1,20 +1,20 @@
 <section id="two" class="wrapper style2 special">
     <div class="inner narrow">
       <header>
-        <h2>Get in touch</h2>
+        <h2>Escribenos tus comentarios</h2>
       </header>
-      <form class="grid-form" method="post" action="#">
+      <form (submit)="addTask()" class="grid-form">
         <div class="form-control narrow">
           <label for="name">Name</label>
-          <input name="name" id="name" type="text">
+          <input name="name" id="name" type="text" [(ngModel)]="name">
         </div>
         <div class="form-control narrow">
           <label for="email">Email</label>
-          <input name="email" id="email" type="email">
+          <input name="email" id="email" type="email" [(ngModel)]="email">
         </div>
         <div class="form-control">
           <label for="message">Message</label>
-          <textarea name="message" id="message" rows="4"></textarea>
+          <textarea name="message" id="message" rows="4" [(ngModel)]="message"></textarea>
         </div>
         <ul class="actions">
           <li><input value="Enviar comentario" type="submit"></li>

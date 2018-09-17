@@ -8,6 +8,7 @@ import { TestComponentComponent } from './test-component/test-component.componen
 import { UserComponent } from './user/user.component';
 import {RouterModule, Routes} from '@angular/router';
 import { DataService } from "./servicios/data.service";
+import { ListaComentariosComponent } from './lista-comentarios/lista-comentarios.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { DataService } from "./servicios/data.service";
     HolaMundo,
     TestComponentComponent,
     UserComponent,
+    ListaComentariosComponent,
   ],
   imports: [
     BrowserModule,
