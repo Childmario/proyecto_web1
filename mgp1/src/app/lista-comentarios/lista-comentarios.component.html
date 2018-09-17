@@ -1,14 +1,9 @@
-<div>
-  <div class="card">
-    <div class="card-header">
-      <h1>{{task.nombre}}</h1>
-      <h2>{{task.correo}}</h2>
-      <div class="float-rigth">
-          <a href="#" (click)="Removercomentario()" class="btn btn-danger">Remover</a>
-      </div>
-    </div>
-    <div class="card-body">
-      <p>{{task.mensaje}}</p>
-    </div>
-  </div>
-</div>
+
+<section id="banner">
+    <h1>{{task.nombre}}</h1>
+    <h2>{{task.correo}}</h2>
+    <p>{{task.mensaje}}</p>
+    <ul class="actions">
+      <li><a href="#" (click)="Removercomentario()" class="button special">Remover</a></li>
+    </ul>
+  </section>
