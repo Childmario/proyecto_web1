@@ -20,7 +20,7 @@ export class TestComponentComponent implements OnInit {
 
   }
 
-  agregarComentario(task: Task){
+  addTask(task: Task){
 
     this.dataService.addTask(task);
 

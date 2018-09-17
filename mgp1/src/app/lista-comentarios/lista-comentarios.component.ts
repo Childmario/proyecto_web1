@@ -9,7 +9,7 @@ import { DataService } from "../servicios/data.service";
   styleUrls: ['./lista-comentarios.component.css']
 })
 export class ListaComentariosComponent implements OnInit {
-@Input ('comentario') task: Task;
+@Input ('task') task: Task;
   constructor(public dataService: DataService) { 
 
   }

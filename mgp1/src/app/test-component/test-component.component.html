@@ -1,6 +1,8 @@
+<app-user (Comentario_agregado) = "addTask($event)"></app-user>
+
 <div class="container">
     <app-lista-comentarios 
     class="col-md4 p-2" 
     *ngFor = "let task of tasks" 
-    [comentario] = "task"></app-lista-comentarios>
+    [task] = "task"></app-lista-comentarios>
 </div>

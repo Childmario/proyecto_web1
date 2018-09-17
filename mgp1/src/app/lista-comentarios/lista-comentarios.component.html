@@ -3,7 +3,9 @@
     <div class="card-header">
       <h1>{{task.nombre}}</h1>
       <h2>{{task.correo}}</h2>
-      <a href="#" (click)="Removercomentario()" class="btn btn-danger">Remover</a>
+      <div class="float-rigth">
+          <a href="#" (click)="Removercomentario()" class="btn btn-danger">Remover</a>
+      </div>
     </div>
     <div class="card-body">
       <p>{{task.mensaje}}</p>
