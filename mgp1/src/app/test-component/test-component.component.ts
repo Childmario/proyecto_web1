@@ -10,7 +10,6 @@ import { DataService } from "../servicios/data.service";
 })
 export class TestComponentComponent implements OnInit {
   tasks: Task[];
-  title = " - Sea Bienvenido";
 
   constructor(public dataService: DataService) { }
 

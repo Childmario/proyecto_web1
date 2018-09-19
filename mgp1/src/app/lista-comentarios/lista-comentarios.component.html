@@ -3,7 +3,10 @@
     <h1>{{task.nombre}}</h1>
     <h2>{{task.correo}}</h2>
     <p>{{task.mensaje}}</p>
+    <p>{{task.movil}}</p>
+    <p>{{task.nacion}}</p>
     <ul class="actions">
-      <li><a href="#" (click)="Removercomentario()" class="button special">Remover</a></li>
+      <li><a href="#" (click)="removercomentario()" class="btn btn-danger">Remover</a></li>
+      <li><a href="#" (click)="editarcomentario()" class="btn btn-primary">Editar</a></li>
     </ul>
   </section>

@@ -11,8 +11,9 @@ export class UserComponent implements OnInit {
 name: string;
 email: string;
 message: string;
+movil: string;
+nacion: string;
 @Output() Comentario_agregado = new EventEmitter<Task>();
-@Input() vnombre_usuario;
   constructor() { }
   ngOnInit() {
   }
@@ -20,10 +21,14 @@ addTask(){
 this.Comentario_agregado.emit({
   nombre: this.name,
   correo: this.email,
-  mensaje: this.message
+  mensaje: this.message,
+  movil: this.movil,
+  nacion: this.nacion
 })
 this.name = '';
 this.email = '';
 this.message = '';
+this.movil = '';
+this.nacion = '';
 }
 }
