@@ -37,12 +37,12 @@ export class DataService {
     }
   }
 
-  removeTask(task: Task): void {
+  removeTask(task: Task){
 
     for (let index = 0; index < this.tasks.length; index++) {
-      if (task = this.tasks[index]) {
-        this.tasks.slice(index, 1);
-        localStorage.setItem('tasks', JSON.stringify( this.tasks ))
+      if (task == this.tasks[index]) {
+        this.tasks.splice(index, 1);
+        localStorage.setItem('tasks', JSON.stringify( this.tasks ));
       }
       
     }

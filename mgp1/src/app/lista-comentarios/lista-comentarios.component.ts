@@ -17,4 +17,12 @@ export class ListaComentariosComponent implements OnInit {
   ngOnInit() {
   }
 
+  removercomentario(task: Task){
+    const respuesta = confirm('Desea borrar la tarea');
+    if (respuesta) {
+      this.dataService.removeTask(task);
+    }
+
+  }
+
 }

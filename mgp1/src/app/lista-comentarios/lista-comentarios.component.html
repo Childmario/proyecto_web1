@@ -6,7 +6,7 @@
     <p>{{task.movil}}</p>
     <p>{{task.nacion}}</p>
     <ul class="actions">
-      <li><a href="#" (click)="removercomentario()" class="btn btn-danger">Remover</a></li>
+      <li><a (click)="removercomentario(task)" class="btn btn-danger">Remover</a></li>
       <li><a href="#" (click)="editarcomentario()" class="btn btn-primary">Editar</a></li>
     </ul>
   </section>
