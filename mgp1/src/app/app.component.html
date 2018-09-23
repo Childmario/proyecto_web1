@@ -5,12 +5,18 @@
 				<p>Informate</p>
 				<ul class="actions">
           <!--<li><a routerLink="/crear" class="button special">Crear comentario</a></li>-->
-          <li><a routerLink="/visualizar" class="button special">Ver comentarios</a></li>
-          <li><a href="#" class="button special">Eliminar comentario</a></li>
+          <li><a href="#crear" class="button special">Escribir comentarios</a></li>
+          <li><a href="#ver" class="button special">Ver comentarios</a></li>
 				</ul>
-			</section>
+      </section>
+      <app-test-component id="crear"></app-test-component>
 
-      <router-outlet></router-outlet>
+      <div class="container">
+        <app-lista-comentarios id="ver"
+        class="col-md4 p-2" 
+        *ngFor = "let task of tasks" 
+        [task] = "task"></app-lista-comentarios>
+      </div>
 			
       <footer id="footer">
           <div class="copyright">
@@ -29,5 +35,7 @@
 
 
 </ul>
-<input type="button" class="btn btn-danger" value="Crear"> 
+
+
+
 

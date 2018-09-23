@@ -49,5 +49,10 @@ export class DataService {
 
   }
 
+  updateTask(task: Task){
+
+    
+  }
+
 }
 

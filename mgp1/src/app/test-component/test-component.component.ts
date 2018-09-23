@@ -15,7 +15,7 @@ export class TestComponentComponent implements OnInit {
 
   ngOnInit() {
 
-    this.tasks = this.dataService.getTask();
+    //this.tasks = this.dataService.getTask();
 
   }
 

@@ -1,12 +1,17 @@
 
 <section id="banner">
-    <h1>{{task.nombre}}</h1>
-    <h2>{{task.correo}}</h2>
-    <p>{{task.mensaje}}</p>
+    <h1 class="display-3">{{task.nombre}}
+      <h1 class="display-4">{{task.correo}}</h1>
+    </h1>
+    <h2>{{task.mensaje}}</h2>
     <p>{{task.movil}}</p>
     <p>{{task.nacion}}</p>
     <ul class="actions">
-      <li><a (click)="removercomentario(task)" class="btn btn-danger">Remover</a></li>
-      <li><a href="#" (click)="editarcomentario()" class="btn btn-primary">Editar</a></li>
+      <li><a (click)="removercomentario(task)" class="btn btn-danger text-light">Remover</a></li>
+      <li><a type="button" class="btn btn-primary text-light" >Editar</a></li>
     </ul>
   </section>
+
+
+
+
