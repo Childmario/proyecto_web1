@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 import { Task } from "../Models/task";
 import { DataService } from "../servicios/data.service";
@@ -10,7 +10,14 @@ import { DataService } from "../servicios/data.service";
 })
 export class ListaComentariosComponent implements OnInit {
   tasks: Task[];
+  edit_task: Task;
+  name: string;
+  email: string;
+  message: string;
+  movil: string;
+  nacion: string;
 @Input ('task') task: Task;
+@Output() item_editado = new EventEmitter<Task>();
   constructor(public dataService: DataService) { 
 
   }
@@ -28,10 +35,12 @@ export class ListaComentariosComponent implements OnInit {
   }
 
   editar(task: Task){
-    const respuesta = confirm('Desea editar la tarea');
-    if (respuesta) {
-      this.dataService.editTask(task);
-    }
+
+      this.edit_task = this.dataService.editTask(task);
+      //console.log(this.edit_task);
+      console.log(this.edit_task);
+      this.item_editado.emit(this.edit_task);
+      console.log(this.item_editado);
   }
 
 }

@@ -50,19 +50,33 @@ export class DataService {
 
   }
 
-  editTask(task: Task):void{
+  editTask(task: Task):Task{
 
     for (let index = 0; index < this.tasks.length; index++) {
       if (task == this.tasks[index]) {
           this.tasks2 = this.tasks[index];
-          console.log(this.tasks2);
+          //console.log(this.tasks2);
+          this.tasks2.id = index.toString();
       }
     }
-
+    return this.tasks2;
   }
 
   updateTask(task: Task):void{
-
+    let id: number = 0;
+    id = Number(task.id);
+    let tasks
+    tasks = JSON.parse( localStorage.getItem('tasks') );
+    for (let index = 0; index < tasks.length; index++) {
+      if (id == index) {
+        console.log("Funciona mal");
+        console.log(task);
+        tasks.splice(index, 1, task);
+        console.log(tasks);
+        localStorage.setItem('tasks', JSON.stringify( tasks ));
+      }
+      
+    }
     
   }
 

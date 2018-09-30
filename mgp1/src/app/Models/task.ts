@@ -4,4 +4,5 @@ export interface Task{
     mensaje: string;
     movil: string;
     nacion: string;
+    id: string;
 }

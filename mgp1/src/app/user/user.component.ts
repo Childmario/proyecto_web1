@@ -13,6 +13,7 @@ email: string;
 message: string;
 movil: string;
 nacion: string;
+id: string;
 @Output() Comentario_agregado = new EventEmitter<Task>();
 @Input ('task') task: Task;
   constructor() { }
@@ -24,12 +25,14 @@ this.Comentario_agregado.emit({
   correo: this.email,
   mensaje: this.message,
   movil: this.movil,
-  nacion: this.nacion
+  nacion: this.nacion,
+  id: this.id
 })
 this.name = '';
 this.email = '';
 this.message = '';
 this.movil = '';
 this.nacion = '';
+this.id = ''
 }
 }

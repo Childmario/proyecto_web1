@@ -9,33 +9,51 @@
           <li><a href="#ver" class="button special">Ver comentarios</a></li>
 				</ul>
       </section>
-      <app-test-component id="crear"></app-test-component>
+      <app-test-component id="crear" [hidden] = hide_comentario></app-test-component>
 
-      <div class="container">
-        <app-lista-comentarios id="ver"
+      <div class="container" [hidden] = hide_comentario>
+        <app-lista-comentarios  (item_editado) = input_edit($event) id="ver"
         class="col-md4 p-2" 
         *ngFor = "let task of tasks" 
         [task] = "task"></app-lista-comentarios>
       </div>
-			
+
+      <section id="tres" class="wrapper style2 special">
+        <div id="editacion" class="inner narrow" [hidden] = "hide">
+          <header>
+            <h2>Edita tu comentario</h2>
+          </header>
+          <form (submit)="editTask()" class="grid-form">
+            <div class="form-control narrow">
+              <label for="name">Name</label>
+              <input name="name" id="name" type="text" [(ngModel)]="name2">
+            </div>
+            <div class="form-control narrow">
+              <label for="email">Email</label>
+              <input name="email" id="email" type="email" [(ngModel)]="email2">
+            </div>
+            <div class="form-control narrow">
+                <label for="movil">Movil</label>
+                <input name="Movil" id="movil" type="text" [(ngModel)]="movil2">
+            </div>
+            <div class="form-control narrow">
+                <label for="nacion">Nacionalidad</label>
+                <input name="nacion" id="nacion" type="text" [(ngModel)]="nacion2">
+            </div>
+            <div class="form-control">
+              <label for="message">Message</label>
+              <textarea name="message" id="message" rows="4" [(ngModel)]="message2"></textarea>
+            </div>
+            <ul class="actions">
+              <li><input value="Guardar comentario editado" type="submit"></li>
+            </ul>
+          </form>
+        </div>
+      </section>
+
+
       <footer id="footer">
           <div class="copyright">
             &copy; Programacion WEB - Mario Grajeda 1191014.
           </div>
         </footer>
-
-        
-  
-  
-    
-  
-
-<ul>
-
-
-
-</ul>
-
-
-
-
