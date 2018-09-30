@@ -27,4 +27,11 @@ export class ListaComentariosComponent implements OnInit {
 
   }
 
+  editar(task: Task){
+    const respuesta = confirm('Desea editar la tarea');
+    if (respuesta) {
+      this.dataService.editTask(task);
+    }
+  }
+
 }

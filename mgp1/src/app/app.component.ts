@@ -12,12 +12,16 @@ export class AppComponent {
   title = 'mgp1';
   users = ['Mario', 'Roberto', 'Grajeda','Alvarado'];
   tasks: Task[];
+  tasks2: Task;
 
   constructor(public dataService: DataService){}
 
   ngOnInit() {
     this.tasks = this.dataService.getTask();
   }
+
+
+
 
 }
 

@@ -14,6 +14,7 @@ message: string;
 movil: string;
 nacion: string;
 @Output() Comentario_agregado = new EventEmitter<Task>();
+@Input ('task') task: Task;
   constructor() { }
   ngOnInit() {
   }

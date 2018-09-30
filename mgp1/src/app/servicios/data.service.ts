@@ -7,6 +7,7 @@ import { Task } from "../Models/task";
 })
 export class DataService {
   tasks: Task[];
+  tasks2: Task;
   constructor() { 
     this.tasks = [];
   }
@@ -49,7 +50,18 @@ export class DataService {
 
   }
 
-  updateTask(task: Task){
+  editTask(task: Task):void{
+
+    for (let index = 0; index < this.tasks.length; index++) {
+      if (task == this.tasks[index]) {
+          this.tasks2 = this.tasks[index];
+          console.log(this.tasks2);
+      }
+    }
+
+  }
+
+  updateTask(task: Task):void{
 
     
   }
