@@ -1,0 +1,29 @@
+{
+  "name": "proyecto_web1",
+  "version": "1.0.0",
+  "description": "Proyecto WEB primera parte",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Childmario/proyecto_web1.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Childmario/proyecto_web1/issues"
+  },
+  "homepage": "https://github.com/Childmario/proyecto_web1#readme",
+  "dependencies": {
+    "cors": "^2.8.4",
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "mongojs": "^2.6.0",
+    "nodemon": "^1.18.4",
+    "redis": "^2.8.0"
+  }
+}
