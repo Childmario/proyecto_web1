@@ -20,7 +20,7 @@ app.use(express.json());
 app.use('/api',require('./routes/tasks.js'));
 
 //static files
-app.use(express.static(path.join(__dirname, 'dist/mgp1')));
+app.use(express.static(path.join(__dirname, './dist/mgp1')));
 
 //start server
 app.listen(app.get('port'), ()=> {
