@@ -1,15 +1,13 @@
-version: '2.1'
-
+version: "3"
 services:
-  app:
-    container-name: proyecto_web1
-    restart: always
-    build: .
+  backend:
+    image: mgp1:c001
     ports:
-      - 3000:3000
-    links: mongo
+      - "3000:3000"
+    depends_on:
+     - redis
+     - mongo
+  redis:
+    image: redis
   mongo:
-    container-name: mongo
     image: mongo
-    ports:
-      - 27017:27017
