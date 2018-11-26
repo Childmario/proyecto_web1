@@ -1,7 +1,9 @@
 version: "3"
 services:
   backend:
-    image: mgp1:c001
+    container_name: guate_comenta
+    restart: always
+    build: .
     ports:
       - "3000:3000"
     depends_on:
