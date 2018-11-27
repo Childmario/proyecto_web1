@@ -8,7 +8,7 @@ import { Task } from "../Models/task";
   providedIn: 'root'
 })
 export class DataService {
-  domain: string = "http://localhost:3000";
+  domain: string = "http://159.89.108.215:3000";
   tasks: Task[];
   tasks2: Task;
   constructor(private http: HttpClient) { 
