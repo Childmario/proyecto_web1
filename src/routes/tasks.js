@@ -1,10 +1,11 @@
 const router = require('express').Router();
 const mongojs = require('mongojs')
-const db = mongojs('mean-db', ['tasks']);
-//var redis = require('redis');
+var db = mongojs('mongodb://mongo:27017/mean-db', ['tasks'])
+//const db = mongojs('mongo', ['tasks']);
+var redis = require('redis');
  
 //var cliente = redis.createClient(6379, '127.0.0.1');
-//var cliente = redis.createClient(6379, 'redis');
+var cliente = redis.createClient(6379, 'redis');
 
 router.get('/tasks', (req, res, next) => {
 db.tasks.find((err, tasks) => {
