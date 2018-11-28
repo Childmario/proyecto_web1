@@ -388,7 +388,7 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 var DataService = /** @class */ (function () {
     function DataService(http) {
         this.http = http;
-        this.domain = "http://localhost:3000";
+        this.domain = "http://159.89.108.215:3000";
         this.tasks = [];
     }
     DataService.prototype.getTask = function () {
